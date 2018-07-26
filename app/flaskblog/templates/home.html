@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for place in places %}
+        <article class="media content-section">
+          <div class="media">
+            <img class="rounded-circle account-img" src="{{ image }}">
+            <div class="media-body">
+              <h2 class="account-heading">{{ place.name }}</h2>
+              <h4 class="text-secondary">{{ place.city }}</h4>
+              <div class="article-metadata">
+                <small class="text-muted">{{ place.features }}</small>
+              </div>
+              <h2><a class="article-title" href="#">{{ place.name }}</a></h2>
+              <p class="article-content">{{ post.desc }}</p>
+            </div>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
